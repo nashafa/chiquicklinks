@@ -11,13 +11,7 @@
     <link rel="import" href="bower_components/paper-card/paper-card.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
     <style is="custom-style">
-        paper-button {
-            --paper-button-flat-focus-color: {
-                color: aqua
-            }
-        }
-        
-        #cards {
+        .cards {
             @apply(--layout-horizontal);
             @apply(--layout-wrap);
             @apply(--layout-flex);
@@ -30,18 +24,6 @@
             background-color: darkgrey;
         }
         
-        paper-scroll-header-panel {
-            height: 100%;
-            --paper-scroll-header-panel-full-header: {
-                background-color: red;
-            }
-            ;
-            --paper-scroll-header-panel-condensed-header: {
-                background-color: aqua;
-            }
-            ;
-        }
-        
         .blue {
             background-color: var(--paper-light-blue-500);
         }
@@ -49,22 +31,29 @@
         .pink {
             background-color: var(--paper-pink-a200);
         }
+        
+        .header {
+            height: auto;
+        }
+
 
     </style>
 
 </head>
 
 <body class="fullbleed layout vertical">
-    <div id="header">
-        <paper-toolbar class="blue">
-            <span class="title">Reddit Chi Quick Links</span>
-            <paper-icon-button icon="search"></paper-icon-button>
-        </paper-toolbar>
-        <div class="fit">Content here?</div>
+    <div class="header">
+        <paper-header-panel class="flex">
+            <paper-toolbar class="blue">
+                <paper-icon-button icon="menu" on-tap="MenuAction"></paper-icon-button>
+                <div class="title">Reddit Chi Quick Links</div>
+                <paper-icon-button icon="search"></paper-icon-button>
+            </paper-toolbar>
+        </paper-header-panel>
     </div>
-    <div id="cards">
+    <div class="cards">
         <div>
-            <paper-card heading="Members Sheet" animated-shadow>
+            <paper-card id="membersheet" heading="Members Sheet">
                 <div class="card-content">
                     This spreadsheet contains member applications, task rotations, and clan stats for the current and all past seasons.
                 </div>
@@ -74,8 +63,11 @@
                     </a>
                 </div>
             </paper-card>
-            <paper-card heading="Clan War Reservation Post Template" animated-shadow>
+            <paper-card id="wartemplate" heading="Clan War Reservation Post Template">
                 <div class="card-content">
+                    Just some testing text
+                </div>
+                <div class="card-actions">
                     <a href="http://pastebin.com/qFcrvwKK" target="_blank">
                         <paper-button class="link">OPEN</paper-button>
                     </a>
