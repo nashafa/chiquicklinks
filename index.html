@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>Reddit Chi Quick Links</title>
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
     <!-- imports -->
     <link rel="import" href="bower_components/paper-toolbar/">
@@ -10,13 +11,14 @@
     <link rel="import" href="bower_components/paper-styles/paper-styles.html">
     <link rel="import" href="bower_components/paper-card/paper-card.html">
     <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+    <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+    <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
+    
     <style is="custom-style">
         .cards {
-            @apply(--layout-horizontal);
+            @apply(--layout-around-justified);
             @apply(--layout-wrap);
-            @apply(--layout-flex);
-            padding: 2%;
-            position: relative;
+            @apply(--layout-center);
         }
         
         body {
@@ -35,8 +37,11 @@
         .header {
             height: auto;
         }
-
-
+        @media and (max-width: 800px) {
+            .cards {
+            @apply(--layout-end-justified);
+            }
+        }
     </style>
 
 </head>
@@ -44,7 +49,7 @@
 <body class="fullbleed layout vertical">
     <div class="header">
         <paper-header-panel class="flex">
-            <paper-toolbar class="flex" class="blue">
+            <paper-toolbar class="blue">
                 <paper-icon-button icon="menu" on-tap="MenuAction"></paper-icon-button>
                 <div class="title">Reddit Chi Quick Links</div>
                 <paper-icon-button icon="search"></paper-icon-button>
@@ -69,6 +74,36 @@
                 </div>
                 <div class="card-actions">
                     <a href="http://pastebin.com/qFcrvwKK" target="_blank">
+                        <paper-button class="link">OPEN</paper-button>
+                    </a>
+                </div>
+            </paper-card>
+            <paper-card id="strikessheet" heading="Strikes Sheet">
+                <div class="card-content">
+                    Use this spreadsheet to give strikes to players.
+                </div>
+                <div class="card-actions">
+                    <a href="http://bit.ly/chistrikes" target="_blank">
+                        <paper-button class="link">OPEN</paper-button>
+                    </a>
+                </div>
+            </paper-card>
+            <paper-card id="summaryguide" heading="Summary Guideline">
+                <div class="card-content">
+                    Follow this guideline when creating a summary.
+                </div>
+                <div class="card-actions">
+                    <a href="http://pastebin.com/7xaw9Eu8" target="_blank">
+                        <paper-button class="link">OPEN</paper-button>
+                    </a>
+                </div>
+            </paper-card>
+            <paper-card id="screenshotarchive" heading="Screenshot Archive">
+                <div class="card-content">
+                    This is a link to Reddit Chi's Screenshot Archive which is managed by Nashafa.
+                </div>
+                <div class="card-actions">
+                    <a href="http://pastebin.com/7xaw9Eu8" target="_blank">
                         <paper-button class="link">OPEN</paper-button>
                     </a>
                 </div>
