@@ -1,129 +1,112 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <title>Reddit Chi Quick Links</title>
-    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-    <!-- imports -->
-    <link rel="import" href="bower_components/paper-toolbar/">
-    <link rel="import" href="bower_components/font-roboto/roboto.html">
-    <link rel="import" href="bower_components/paper-button/paper-button.html">
-    <link rel="import" href="bower_components/paper-styles/paper-styles.html">
-    <link rel="import" href="bower_components/paper-card/paper-card.html">
-    <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-    <link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
-    <link rel="import" href="bower_components/iron-flex-layout/classes/iron-flex-layout.html">
-    
-    <style is="custom-style">
-        .cards {
-            @apply(--layout-around-justified);
-            @apply(--layout-wrap);
-            @apply(--layout-center);
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: darkgrey;
-        }
-        
-        .blue {
-            background-color: var(--paper-light-blue-500);
-        }
-        
-        .pink {
-            background-color: var(--paper-pink-a200);
-        }
-        
-        .header {
-            height: auto;
-        }
-        @media and (max-width: 800px) {
-            .cards {
-            @apply(--layout-end-justified);
-            }
-        }
-    </style>
 
+    <!-- CSS  -->
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
-<body class="fullbleed layout vertical">
-    <div class="header">
-        <paper-header-panel class="flex">
-            <paper-toolbar class="blue">
-                <paper-icon-button icon="menu" on-tap="MenuAction"></paper-icon-button>
-                <div class="title">Reddit Chi Quick Links</div>
-                <paper-icon-button icon="search"></paper-icon-button>
-            </paper-toolbar>
-        </paper-header-panel>
-    </div>
-    <div class="cards">
-        <div>
-            <paper-card id="membersheet" heading="Members Sheet">
-                <div class="card-content">
-                    This spreadsheet contains member applications, task rotations, and clan stats for the current and all past seasons.
+<body>
+    <nav>
+        <div class="nav-wrapper blue">
+            <a href="#" class="brand-logo center">Quick Links</a>
+        </div>
+    </nav>
+    <div class="container">
+        <br>
+        <br>
+        <div class="row">
+            <div class="col s12 m6 l3">
+                <div class="card light-blue darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Clan War Reservation Post Template</span>
+                        <p>
+                            Use this when creating a reservation post for a Clan War.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://pastebin.com/qFcrvwKK">open</a>
+                    </div>
                 </div>
-                <div class="card-actions">
-                    <a href="http://bit.ly/chimembers" target="_blank">
-                        <paper-button class="link">OPEN</paper-button>
-                    </a>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card deep-purple darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Members Sheet</span>
+                        <p>
+                            This spreadsheet contains member applications, task rotations, and clan stats for the current and all past seasons.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://bit.ly/chimembers">open</a>
+                    </div>
                 </div>
-            </paper-card>
-            <paper-card id="wartemplate" heading="Clan War Reservation Post Template">
-                <div class="card-content">
-                    Just some testing text
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card deep-orange darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Strikes Sheet</span>
+                        <p>
+                            Use this spreadsheet to give strikes to players.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://bit.ly/chistrikes">open</a>
+                    </div>
                 </div>
-                <div class="card-actions">
-                    <a href="http://pastebin.com/qFcrvwKK" target="_blank">
-                        <paper-button class="link">OPEN</paper-button>
-                    </a>
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card blue-grey darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Summary Guideline</span>
+                        <p>
+                            Follow this guideline when creating a summary. 
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://pastebin.com/7xaw9Eu8">open</a>
+                    </div>
                 </div>
-            </paper-card>
-            <paper-card id="strikessheet" heading="Strikes Sheet">
-                <div class="card-content">
-                    Use this spreadsheet to give strikes to players.
+            </div>
+            <div class="col s12 m6 l3">
+                <div class="card pink darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Screenshot Archive</span>
+                        <p>
+                            This is a link to Reddit Chi's Screenshot Archive which is managed by Nashafa.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://bit.ly/1GoRlfo">open</a>
+                    </div>
                 </div>
-                <div class="card-actions">
-                    <a href="http://bit.ly/chistrikes" target="_blank">
-                        <paper-button class="link">OPEN</paper-button>
-                    </a>
+            </div>
+			<div class="col s12 m6 l3">
+                <div class="card red darken-1">
+                    <div class="card-content white-text">
+                        <span class="card-title">Recruitment Template</span>
+                        <p>
+                            This is a link to a recruitment template to post on various subreddits.
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="http://pastebin.com/sMGDdhAv">open</a>
+                    </div>
                 </div>
-            </paper-card>
-            <paper-card id="summaryguide" heading="Summary Guideline">
-                <div class="card-content">
-                    Follow this guideline when creating a summary.
-                </div>
-                <div class="card-actions">
-                    <a href="http://pastebin.com/7xaw9Eu8" target="_blank">
-                        <paper-button class="link">OPEN</paper-button>
-                    </a>
-                </div>
-            </paper-card>
-            <paper-card id="screenshotarchive" heading="Screenshot Archive">
-                <div class="card-content">
-                    This is a link to Reddit Chi's Screenshot Archive which is managed by Nashafa.
-                </div>
-                <div class="card-actions">
-                    <a href="http://bit.ly/1GoRlfo" target="_blank">
-                        <paper-button class="link">OPEN</paper-button>
-                    </a>
-                </div>
-            </paper-card>
+            </div>
         </div>
     </div>
 
-    <script>
-        // To ensure that elements are ready on polyfilled browsers, 
-        // wait for WebComponentsReady. 
-        document.addEventListener('WebComponentsReady', function() {
-            var input = document.querySelector('paper-input');
-            var button = document.querySelector('paper-button');
-            var greeting = document.getElementById("greeting");
-            button.addEventListener('click', function() {
-                greeting.textContent = 'Hello, ' + input.value;
-            });
-        });
 
-    </script>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
 
 </body>
 
